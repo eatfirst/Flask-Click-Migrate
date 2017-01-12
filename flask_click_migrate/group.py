@@ -1,9 +1,12 @@
+"""We extend the click group to always have the Flask app inside of it and the commands are executed in a context."""
 import click
 from click import Command
 from click.decorators import _make_command
 from flask import _app_ctx_stack
-from .utils import REGISTERED_COMMANDS
+
 import flask_click_migrate.commands
+
+from .utils import REGISTERED_COMMANDS
 
 assert flask_click_migrate.commands
 
@@ -30,7 +33,7 @@ class MigrateGroup(click.Group):
             self.add_command(_make_command(func, None, {}, cls=Command))
 
     def invoke(self, ctx):
-        """Make sure that current ap is up."""
+        """Make sure that current app is up."""
         if _app_ctx_stack.top is not None:
             return super(MigrateGroup, self).invoke(ctx)
         with self.migrate_instance.app.app_context():

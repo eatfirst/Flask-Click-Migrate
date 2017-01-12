@@ -1,6 +1,7 @@
+"""Example of a manage file which would use flask click migrate."""
 import click
-from flask_click_migrate import Migrate, MigrateGroup
 
+from flask_click_migrate import Migrate, MigrateGroup
 from my_app import app, db
 
 migrate = Migrate(app, db)

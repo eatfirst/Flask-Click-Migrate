@@ -1,6 +1,7 @@
 """Migrate commands using click."""
 
 from alembic import __version__ as __alembic_version__
+
 from .config import MigrateConfig
 
 alembic_version = tuple([int(v) for v in __alembic_version__.split('.') if v.isnumeric()])

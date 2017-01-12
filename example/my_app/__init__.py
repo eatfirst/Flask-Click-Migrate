@@ -1,3 +1,4 @@
+"""Sample app."""
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
@@ -11,6 +12,7 @@ db = SQLAlchemy(app)
 
 class MyModel(db.Model):
     """Just a sample model."""
+
     __tablename__ = 'my_model'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     name = db.Column(db.String, nullable=False)

@@ -1,3 +1,4 @@
+"""Alembic's auto generated file."""
 from __future__ import with_statement
 
 from logging.config import fileConfig
@@ -39,7 +40,7 @@ def run_migrations_offline():
     script output.
 
     """
-    url = config.get_main_option("sqlalchemy.url")
+    url = config.get_main_option('sqlalchemy.url')
     context.configure(
         url=url, target_metadata=target_metadata, literal_binds=True)
 

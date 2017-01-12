@@ -1,3 +1,4 @@
+"""Register all the commands that we will expose for the app."""
 import os
 
 import click
@@ -188,6 +189,6 @@ def current(directory=None, verbose=False, head_only=False):
 @click.argument('revision_id', default='head')
 @click.option('-d', '--directory', default=None, help="migration script directory (default is 'migrations')")
 def stamp(directory=None, revision_id='head', sql=False, tag=None):
-    """'Stamp' the revision table with the given revision; don't run any migrations."""
+    """Stamp the revision table with the given revision; don't run any migrations."""
     config = _get_config(directory)
     command.stamp(config, revision_id, sql=sql, tag=tag)

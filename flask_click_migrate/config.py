@@ -1,3 +1,4 @@
+"""Configurable parameters should be here."""
 import os
 
 from alembic.config import Config as OriginalAlembicConfig
@@ -8,6 +9,7 @@ class MigrateConfig(object):
     """Configuration for the migration."""
 
     def __init__(self, database, directory):
+        """Initialize the config."""
         self.database = database
         self.directory = directory
 

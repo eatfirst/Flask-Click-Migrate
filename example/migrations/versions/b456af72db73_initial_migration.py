@@ -16,6 +16,7 @@ depends_on = None
 
 
 def upgrade():
+    """Upgrade example."""
     op.create_table(
         'my_model',
         sa.Column('id', sa.Integer(), nullable=False),
@@ -26,4 +27,5 @@ def upgrade():
 
 
 def downgrade():
+    """Downgrade example."""
     op.drop_table('my_model')

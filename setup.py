@@ -1,4 +1,7 @@
+"""Flask-Click-Migrate."""
+
 from setuptools import setup
+
 setup(
     name='Flask-Click-Migrate',
     version='0.0.1',
