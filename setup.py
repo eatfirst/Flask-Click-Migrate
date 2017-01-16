@@ -4,7 +4,7 @@ from setuptools import setup
 
 setup(
     name='Flask-Click-Migrate',
-    version='0.0.1',
+    version='0.1.0',
     author='EatFirst.com',
     author_email='opensource@eatfirst.com',
     description='A library to glue flask + alembic + click',
